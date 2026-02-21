@@ -2,96 +2,215 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jhon Ever | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #0f0c1d;
+      --card-bg: #1a1635;
+      --accent-purple: #7b61ff;
+      --text-main: #ffffff;
+      --text-dim: #b0b0b0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #222;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
     }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
+
+    .portfolio-card {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 850px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+
+    /* Decoración de fondo */
+    .portfolio-card::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(123, 97, 255, 0.2) 0%, transparent 70%);
+      z-index: 0;
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+
+    /* Sección Superior */
+    .top-section {
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 8px;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .skills span {
+
+    .about-badge {
+      background: var(--accent-purple);
       display: inline-block;
-      background: #333;
-      color: #fff;
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 4px;
+      padding: 10px 30px;
+      border-radius: 0 20px 20px 0;
+      margin-left: -60px;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      color: var(--text-dim);
+      line-height: 1.6;
+      font-size: 0.95em;
+    }
+
+    .profile-img-container {
+      width: 220px;
+      height: 300px;
+      background: #2a2456; /* Color temporal si no hay foto */
+      border-radius: 100px;
+      overflow: hidden;
+      border: 3px solid var(--accent-purple);
+      margin: 0 auto;
+    }
+
+    .profile-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Contacto */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .contact-item {
+      font-size: 0.85em;
+      color: var(--text-dim);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Sección Inferior (Morada) */
+    .bottom-section {
+      background: linear-gradient(135deg, #6c52ee 0%, #a18cf0 100%);
+      padding: 60px;
+      border-top-left-radius: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .skill-list, .education {
+      list-style: none;
+      padding: 0;
       font-size: 0.9em;
+    }
+
+    .skill-list li {
+      margin-bottom: 8px;
+      opacity: 0.9;
+    }
+
+    .tech-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .icon-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.7em;
+    }
+
+    @media (max-width: 768px) {
+      .top-section, .bottom-section { grid-template-columns: 1fr; padding: 30px; }
+      .bottom-section { border-top-left-radius: 40px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Jhon Ever Mosquera Palacios</h1>
-  <p>Desarrollador de Software & Evaluador de sistemas AI</p>
-</header>
-
-<div class="container">
-
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy desarrollador con experiencia práctica en desarrollo web con PHP, JavaScript y bases de datos. Tengo habilidades en análisis, resolución de problemas y documentación técnica. Actualmente estoy orientado a oportunidades en evaluación de sistemas de Inteligencia Artificial.</p>
-  </section>
-
-  <section>
-    <h2>Habilidades</h2>
-    <div class="skills">
-      <span>PHP</span>
-      <span>JavaScript</span>
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>SQL / MariaDB</span>
-      <span>Evaluación de IA</span>
-      <span>Comunicación Escrita</span>
-      <span>Análisis Crítico</span>
+<div class="portfolio-card">
+  <div class="top-section">
+    <div class="intro">
+      <div class="about-badge">Sobre mí</div>
+      <p>
+        Hola,<br>
+        Mi nombre es <strong>Jhon Ever Mosquera</strong>.<br>
+        Soy Desarrollador de Software y Evaluador de sistemas AI. Tengo experiencia en PHP, JavaScript y bases de datos, enfocado en resolver problemas complejos y mejorar la eficiencia tecnológica.
+      </p>
+      
+      <h3>Contacto</h3>
+      <div class="contact-grid">
+        <a href="mailto:tuemail@gmail.com" class="contact-item">📧 tuemail@gmail.com</a>
+        <a href="#" class="contact-item">📞 +57 300 000 0000</a>
+        <a href="https://github.com/jhonever18" class="contact-item">🔗 github.com/jhonever18</a>
+        <a href="#" class="contact-item">💼 LinkedIn/jhonever</a>
+      </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Proyecto Destacado</h2>
-    <p><strong>Sistema de Gestión de Restaurante</strong><br>
-    Sistema web desarrollado con PHP, MariaDB y JavaScript.</p>
-    <a href="https://github.com/jhonever18/sistema-restaurante" target="_blank">Ver proyecto en GitHub</a>
-  </section>
+    <div class="profile-img-container">
+      <img src="https://via.placeholder.com/220x300" alt="Jhon Ever">
+    </div>
+  </div>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/jhonever18" target="_blank">github.com/jhonever18</a></p>
-  </section>
+  <div class="bottom-section">
+    <div>
+      <h3>Educación</h3>
+      <p class="education"><strong>Análisis y Desarrollo de Sistemas</strong><br>Institución Académica | 2020 - Presente</p>
+      
+      <h3>Habilidades Técnicas</h3>
+      <div class="tech-icons">
+        <div class="icon-box">PHP</div>
+        <div class="icon-box">JS</div>
+        <div class="icon-box">SQL</div>
+        <div class="icon-box">HTML</div>
+        <div class="icon-box">CSS</div>
+        <div class="icon-box">AI</div>
+        <div class="icon-box">Git</div>
+        <div class="icon-box">Node</div>
+      </div>
+    </div>
 
+    <div>
+      <h3>Habilidades Blandas</h3>
+      <ul class="skill-list">
+        <li>Pensamiento Crítico</li>
+        <li>Resolución de Problemas</li>
+        <li>Comunicación Escrita</li>
+        <li>Análisis de Datos</li>
+      </ul>
+
+      <h3>Intereses</h3>
+      <p style="font-size: 0.9em;">Tendencias AI | Desarrollo Web | Ciberseguridad</p>
+    </div>
+  </div>
 </div>
 
 </body>
