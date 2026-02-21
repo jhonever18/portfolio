@@ -1,32 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Jhon Ever | Portafolio</title>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>Jhon Ever | Portafolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #222;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .skills span {
+      display: inline-block;
+      background: #333;
+      color: #fff;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; margin: 50px;">
+<body>
 
-    <h1>Jhon Ever Mosquera Palacios</h1>
-    <h3>Desarrollador de Software</h3>
+<header>
+  <h1>Jhon Ever Mosquera Palacios</h1>
+  <p>Desarrollador de Software & Evaluador de sistemas AI</p>
+</header>
 
-    <p>
-        Aprendiz SENA con experiencia en desarrollo web y bases de datos.
-        Me enfoco en la resolución de problemas y optimización de sistemas.
-    </p>
+<div class="container">
 
-    <h2>Proyectos</h2>
+  <section>
+    <h2>Sobre mí</h2>
+    <p>Soy desarrollador con experiencia práctica en desarrollo web con PHP, JavaScript y bases de datos. Tengo habilidades en análisis, resolución de problemas y documentación técnica. Actualmente estoy orientado a oportunidades en evaluación de sistemas de Inteligencia Artificial.</p>
+  </section>
 
-    <h3>Sistema de Gestión de Restaurante</h3>
-    <p>
-        Aplicación desarrollada en PHP, MariaDB y JavaScript.
-    </p>
-    <a href="https://github.com/jhonever18/sistema-restaurante">
-        Ver proyecto en GitHub
-    </a>
+  <section>
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <span>PHP</span>
+      <span>JavaScript</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>SQL / MariaDB</span>
+      <span>Evaluación de IA</span>
+      <span>Comunicación Escrita</span>
+      <span>Análisis Crítico</span>
+    </div>
+  </section>
 
+  <section>
+    <h2>Proyecto Destacado</h2>
+    <p><strong>Sistema de Gestión de Restaurante</strong><br>
+    Sistema web desarrollado con PHP, MariaDB y JavaScript.</p>
+    <a href="https://github.com/jhonever18/sistema-restaurante" target="_blank">Ver proyecto en GitHub</a>
+  </section>
+
+  <section>
     <h2>Contacto</h2>
-    <p>Email: tuemail@gmail.com</p>
-    <p>GitHub: github.com/jhonever18</p>
+    <p>Email: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/jhonever18" target="_blank">github.com/jhonever18</a></p>
+  </section>
+
+</div>
 
 </body>
 </html>
